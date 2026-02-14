@@ -1,0 +1,44 @@
+# GreenGuard Walkthrough
+
+GreenGuard is an AI-powered application to detect greenwashing in corporate claims. It uses a React frontend and Node.js backend with Gemini 3 Pro.
+
+## Project Structure
+- `client/`: React + Vite frontend
+- `server/`: Express backend
+
+## Prerequisites
+- Node.js installed
+- A Google Gemini API Key
+
+## Setup & Run
+
+### 1. Configure Backend
+Navigate to the server directory and add your API key:
+
+```bash
+cd GreenGuard/server
+# Edit .env file
+nano .env
+# Set GEMINI_API_KEY=your_actual_key
+```
+
+### 2. Start Backend
+```bash
+npm install
+node index.js
+```
+Expected output: `Server running on port 5000`
+
+### 3. Start Frontend
+Open a new terminal:
+```bash
+cd GreenGuard/client
+npm install
+npm run dev
+```
+Open the URL shown (usually `http://localhost:5173`) in your browser.
+
+## Usage
+1. Paste marketing text into the input box.
+2. Click "Analyze Text".
+3. View the Risk Score and detailed analysis.

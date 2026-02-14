@@ -1,0 +1,35 @@
+# GreenGuard Hackathon Upgrade Plan
+
+## User Review Required
+> [!IMPORTANT]
+> This upgrade introduces a "Smart Simulation" mode that bypasses the live Gemini API when `USE_MOCK_AI` is true. This is intended for demo purposes to avoid rate limits.
+
+## Proposed Changes
+
+### Backend ([server/index.js](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/server/index.js))
+- **[MODIFY]** Add `USE_MOCK_AI` logic.
+- **[NEW]** Implement `analyzeWithMockAI(text)` function:
+    - **Scenario A (High Risk)**: Triggered by keywords ("oil", "fuel", etc.). Returns specific JSON for greenwashing.
+    - **Scenario B (Low Risk)**: Triggered by keywords ("verified", "scope 1", etc.). Returns positive JSON.
+    - **Scenario C (Medium Risk)**: Default. Returns ambiguous JSON.
+- **[MODIFY]** Add 1.5s latency simulation.
+
+### Frontend (`client/src`)
+#### Components
+- **[NEW] `LoadingState.jsx`**: Modern scanning animation component.
+- **[MODIFY] [ResultsDashboard.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/components/ResultsDashboard.jsx)**:
+    - Add SVG Semi-Circle Gauge.
+    - Replace list with styled Cards for "Red Flags" and "Green Flags".
+- **[MODIFY] [App.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/App.jsx)**:
+    - Integrate `LoadingState` when `isLoading` is true.
+    - Update typography and layout structure.
+
+### CSS ([index.css](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/index.css) / Tailwind)
+- Ensure custom animations (pulse, spin) are available.
+
+## Verification Plan
+### Manual Verification
+- **Scenario A Test**: Input "This new fuel is earth-friendly." -> Expect High Risk + Red Flags.
+- **Scenario B Test**: Input "We verified consistent Scope 1 emission reductions in our annual report." -> Expect Low Risk + Green Flags + Gauge in Green.
+- **Scenario C Test**: Input "We are trying our best." -> Expect Medium Risk.
+- **UI Check**: Verify loading animation plays for ~1.5s. Verify Gauge animates or renders correctly.

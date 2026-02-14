@@ -1,0 +1,38 @@
+# GreenGuard Implementation Plan
+
+GreenGuard is a web application to detect greenwashing in corporate marketing text using Gemini 3 Pro.
+
+## User Review Required
+> [!IMPORTANT]
+> The application requires a valid API key for Gemini 3 Pro (`GEMINI_API_KEY`). The user will need to provide this or set it in their environment. I will use a placeholder or check for the env var.
+
+## Proposed Changes
+
+### Project Structure
+Directory: `/Users/farisadnan/.gemini/antigravity/scratch/GreenGuard`
+- `client/`: React Frontend
+- `server/`: Node.js Backend
+
+### Backend (Node.js + Express)
+- **Dependencies**: `express`, `cors`, `dotenv`, `@google/generative-ai`
+- **Endpoints**:
+    - `POST /api/analyze`: Receives `{ text: string }`, returns structured analysis.
+- **AI Logic**:
+    - Model: `gemini-pro` (or specific version if available, will likely use generic `gemini-pro` or `gemini-1.5-pro` as "Gemini 3 Pro" might be a moniker for the latest). *Correction*: User specified "Gemini 3 Pro". I will interpret this as the latest available model or check if there's a specific string. Taking "Gemini 1.5 Pro" as the current high-end standard available via API, or if "Gemini 3" is available in the specific context I will use that. I will stick to `gemini-1.5-pro-latest` or similar safe default unless I find specific "Gemini 3" documentation in keys (unlikely to be public yet? or maybe it's just a prompt instruction). *Actually*, I will use `gemini-2.0-flash` or `gemini-1.5-pro` as robust defaults if "Gemini 3" isn't a literal model string yet, or just use `gemini-3-pro` if that's the literal instruction. I'll stick to a standard reliable model string like `gemini-1.5-pro` or check valid models if needed, but for now I'll assume standard latest.
+
+### Frontend (React + Vite)
+- **Styling**: TailwindCSS for "clean, modern" look.
+- **Components**:
+    - `Header`: Title and subtitle.
+    - `AnalyzeForm`: Teaxtarea and button.
+    - `ResultsDashboard`: Displays Risk Score (0-100), Risk Level, Claims List, Red Flags.
+    - `RiskMeter`: Visual component for the score.
+
+## Verification Plan
+### Automated Tests
+- `curl` test against the backend API to verify JSON structure.
+- Browser verify to check UI rendering.
+
+### Manual Verification
+- Input sample greenwashing text (e.g., "Eco-friendly, natural packaging...").
+- Verify the risk score and list appear.

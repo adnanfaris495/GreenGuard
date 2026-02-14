@@ -1,0 +1,43 @@
+# GreenGuard - Greenwashing Detection App
+
+- [x] Project Setup <!-- id: 0 -->
+    - [x] Create project directory `GreenGuard` <!-- id: 1 -->
+    - [x] Initialize frontend (React + Vite, TailwindCSS) <!-- id: 2 -->
+    - [x] Initialize backend (Node.js + Express) <!-- id: 3 -->
+- [x] Backend Implementation (Initial) <!-- id: 4 -->
+    - [x] Setup Express server <!-- id: 5 -->
+    - [x] Configure Gemini 3 Pro API integration <!-- id: 6 -->
+    - [x] Create `/analyze` endpoint with structured JSON prompt <!-- id: 7 -->
+- [x] Frontend Implementation (Initial) <!-- id: 8 -->
+    - [x] Setup TailwindCSS configuration <!-- id: 9 -->
+    - [x] Create Clean/Modern Layout (Header, Main, Footer) <!-- id: 10 -->
+    - [x] Implement Analyze Form Component <!-- id: 11 -->
+    - [x] Implement Results Display Component (Score, Claims, Risk Level) <!-- id: 12 -->
+    - [x] Connect Frontend to Backend API <!-- id: 13 -->
+- [x] Verification (Connectivity) <!-- id: 14 -->
+    - [x] Test API with verify_curl or similar <!-- id: 15 -->
+    - [x] Verify UI flow <!-- id: 16 -->
+    - [x] Fix AirTunes port conflict (Moved to 5001) <!-- id: 17 -->
+    - [x] Debug Frontend-Backend Connectivity <!-- id: 18 -->
+- [x] Hackathon Upgrade (Smart Simulation) <!-- id: 19 -->
+    - [x] Update [server/index.js](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/server/index.js) with "Smart Mock" logic (Scenarios A/B/C) <!-- id: 20 -->
+    - [x] Add random latency (1.5s) <!-- id: 21 -->
+- [x] Hackathon Upgrade (UI/UX) <!-- id: 22 -->
+    - [x] Create `LoadingState` component (Scanning animation) <!-- id: 23 -->
+    - [x] Update [ResultsDashboard.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/ResultsDashboard.jsx) with Score Gauge <!-- id: 24 -->
+    - [x] Implement Red/Green Flag cards <!-- id: 25 -->
+    - [x] Update [App.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/App.jsx) to integrate new components <!-- id: 26 -->
+    - [x] Verify Demo Flow <!-- id: 27 -->
+- [x] UI Redesign (Modern Eco-Tech) <!-- id: 28 -->
+    - [x] Update [tailwind.config.js](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/tailwind.config.js) (Fixed Content Paths) <!-- id: 29 -->
+    - [x] Re-style components (App, AnalyzeForm, ResultsDashboard) <!-- id: 30 -->
+    - [x] Fix Data Mapping (Frontend adapts to Backend) <!-- id: 31 -->
+- [x] V2 Upgrade (Platform Features) <!-- id: 32 -->
+    - [x] Backend: Install `cheerio` `axios` <!-- id: 33 -->
+    - [x] Backend: Implement URL Scraping & Categories in [server/index.js](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/server/index.js) <!-- id: 34 -->
+    - [x] Frontend: Update [AnalyzeForm.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/AnalyzeForm.jsx) (Tabs + Dropdown) <!-- id: 35 -->
+    - [x] Frontend: Create [SocialFeed.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/components/SocialFeed.jsx) component <!-- id: 36 -->
+    - [x] Frontend: Integrate Social Feed in [App.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/App.jsx) <!-- id: 37 -->
+- [x] V3 Dashboard Refactor <!-- id: 38 -->
+    - [x] Create [AboutView.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/components/AboutView.jsx) <!-- id: 39 -->
+    - [x] Refactor [App.jsx](file:///Users/farisadnan/.gemini/antigravity/scratch/GreenGuard/client/src/App.jsx) with Sidebar & View State <!-- id: 40 -->
