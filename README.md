@@ -2,25 +2,13 @@
 
 **The AI-Powered Truth Detector for the Green Economy.**
 
-Built for [Insert Hackathon Name] 2026
+Built for PatiotHacks 2026
 
 GreenGuard detects corporate "greenwashing" in real-time. By combining Google's Gemini AI with web scraping, we analyze marketing text, sustainability reports, and URLs to separate verified facts from vague marketing fluff.
 
 ---
 
-## Screenshots
 
-| Dashboard Analysis | X-Ray Mode |
-|:---:|:---:|
-| ![Dashboard](https://via.placeholder.com/400x200?text=Dashboard+Screenshot) | ![XRay](https://via.placeholder.com/400x200?text=X-Ray+Mode) |
-| *Risk Scoring & Gauges* | *Real-time Keyword Highlighting* |
-
-| The "De-Greenwash" Reveal | Wall of Shame |
-|:---:|:---:|
-| ![Reveal](https://via.placeholder.com/400x200?text=De-Greenwash+Result) | ![Social](https://via.placeholder.com/400x200?text=Wall+of+Shame) |
-| *Generative AI Rewrite* | *Community Tracking Feed* |
-
----
 
 ## Key Features
 
